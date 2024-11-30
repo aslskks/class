@@ -26,13 +26,13 @@ const manejarCookies = {
   };
 let num = 0;
 function sumar() {
-    if (manejarCookies.get("num_clicks") == None) {
+    if (manejarCookies.get("num_clicks") == null) {
         num = num++;
         
         manejarCookies.set("num_clicks", num, 10000000000000000000000000000000000000000)
     }
     else{
-        num = manejarCookies.get("num_clicks");
+        num = `${manejarCookies.get("num_clicks")}`;
     }
     document.getElementById("resultado").innerHTML = num;
 
